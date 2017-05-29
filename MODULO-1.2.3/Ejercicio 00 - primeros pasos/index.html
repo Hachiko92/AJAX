@@ -12,13 +12,13 @@
         <!-- ********** CSS ********** -->
         <link rel="stylesheet" type="text/css" href="css/style.css">
 		<!-- ********** Angular ********** -->
-		<script src="../../node_modules/angularjs/index.js"></script>
+		<script src="../../node_modules/angular/angular.min.js"></script>
 
 
 	</head>
 
 	<!-- ng-init es un ANTIPATRON que no se debe utilizar -->
-	<body ng-app ng-init="{sCurso: 'Curso angular', sName: 'Pepe'}">	 
+	<body ng-app ng-init="sCurso = 'Curso angular'; sNombre = 'Pepe'">	 
 		
 		<div class="wrap">	
 			<header>
@@ -26,17 +26,18 @@
 			</header>
 			<article>
 				<form name="formulario">
-					<label for="fNombre" id="lblNombre">Indica tu nombre</label>
+					<label for="sNombre">Indica tu nombre</label>
 					<!-- asociamos el imput a una variable del modelo -->
-					<input type="text" id="fNombre" ng-model="sName">
+					<input type="text" id="sNombre" ng-model="sNombre">
 					<label></label>
 					<!-- asociamos una operación con el evento click -->
-					<input type="button"  id="btnBorrar" value="Borrar nombre" ng-click="sName=''">	
+					<input type="button" value="Borrar nombre" ng-click="sNombre=''">	
 				</form>
 
 				<!-- Presentamos mediante expresiones los valores de variable del scope -->
-				<p>Hola <span id="nombre" class="destacado">{{sName}}</span>.</p>
-				<p>Bienvenid@ al curso de <strong id="curso" class="destacado"></strong>.</p>
+				<!-- pongo .toUpperCase() para ver que algunos metodos se pueden utilizar sin problemas -->
+				<p>Hola <span id class="destacado">{{sNombre.toUpperCase()}}</span>.</p>
+				<p>Bienvenid@ al curso de <strong class="destacado">{{sCurso}}</strong>.</p>
 
 				
 			</article>

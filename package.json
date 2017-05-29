@@ -1,5 +1,5 @@
 {
-  "name": "angular",
+  "name": "angularcurso",
   "version": "1.0.0",
   "description": "Ejemplos de Angular",
   "main": "index.js",
@@ -8,12 +8,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Hachiko92/Angular.git"
+    "url": "git+https://github.com/Hachiko92/AngularJS.git"
   },
   "author": "Eleonora Franchini",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Hachiko92/Angular/issues"
+    "url": "https://github.com/Hachiko92/AngularJS/issues"
   },
-  "homepage": "https://github.com/Hachiko92/Angular#readme"
+  "homepage": "https://github.com/Hachiko92/AngularJS#readme",
+  "dependencies": {
+    "angular": "^1.6.4"
+  }
 }
