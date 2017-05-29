@@ -1,7 +1,7 @@
 {
   "name": "angular",
   "version": "1.0.0",
-  "description": "Ejercicios de Angular",
+  "description": "Ejemplos de Angular",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,16 +10,10 @@
     "type": "git",
     "url": "git+https://github.com/Hachiko92/Angular.git"
   },
-  "keywords": [
-    "AngularJS"
-  ],
   "author": "Eleonora Franchini",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Hachiko92/Angular/issues"
   },
-  "homepage": "https://github.com/Hachiko92/Angular#readme",
-  "dependencies": {
-    "angularjs": "0.0.1"
-  }
+  "homepage": "https://github.com/Hachiko92/Angular#readme"
 }
