@@ -1,3 +1,3 @@
-# Ejercicios de la primera unidad
+# Ejercicios de la amplicación de la unidad 2
 
-Ejemplos de HTML5 y CSS3
+Ejemplos de Angular
