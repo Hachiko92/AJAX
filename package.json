@@ -1,27 +1,25 @@
 {
-  "name": "javascriptweb",
+  "name": "angular",
   "version": "1.0.0",
-  "description": "JavaScript & JQuery en la web",
+  "description": "Ejercicios de Angular",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Hachiko92/JavaScriptWeb.git"
+    "url": "git+https://github.com/Hachiko92/Angular.git"
   },
   "keywords": [
-    "JS",
-    "JQuery"
+    "AngularJS"
   ],
   "author": "Eleonora Franchini",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Hachiko92/JavaScriptWeb/issues"
+    "url": "https://github.com/Hachiko92/Angular/issues"
   },
-  "homepage": "https://github.com/Hachiko92/JavaScriptWeb#readme",
+  "homepage": "https://github.com/Hachiko92/Angular#readme",
   "dependencies": {
-    "bootstrap": "^3.3.7",
-    "jquery": "^3.2.1"
+    "angularjs": "0.0.1"
   }
 }
