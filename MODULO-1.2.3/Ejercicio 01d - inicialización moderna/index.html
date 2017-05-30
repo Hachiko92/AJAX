@@ -21,8 +21,8 @@
 
 	</head>
 
-	<!-- ng-init es un ANTIPATRON que no se debe utilizar -->
-	<body ng-app="miApp" ng-controller="MainController">	 
+	<!-- $ctrl se puede llamar en qualquier modo: $control, $pippo... -->
+	<body ng-app="miApp" ng-controller="MainController as $ctrl">	 
 		
 		<div class="wrap">	
 			<header>
@@ -33,17 +33,17 @@
 				<form name="formulario">
 					<label for="sNombre">Indica tu nombre</label>
 					<!-- asociamos el imput a una variable del modelo -->
-					<input type="text" id="sNombre" ng-model="sNombre">
+					<input type="text" id="sNombre" ng-model="$ctrl.sNombre">
 					<label for="sIdea">Comparte una idea</label>
-					<input type="text" id="sIdea" ng-model="sIdea">
+					<input type="text" id="sIdea" ng-model="$ctrl.sIdea">
 					<!-- aIdeas.push(sIdea); sIdea='' -->
-					<button type="button" ng-click="botonAdd">Añadir</button>
+					<button type="button" ng-click="$ctrl.botonAdd()">Añadir</button>
 				</form>
 
 				<p>Hola <span id class="destacado">{{sNombre}}</span>.</p>
 				
 				<p>Pensamientos que has tenido: </p>
-				<ul ng-repeat="idea in aIdeas track by $index"> 
+				<ul ng-repeat="idea in $ctrl.aIdeas track by $index"> 
 					<li> Tu pensiamento numero {{$index + 1}} fue: {{idea}} </li>
 				</ul>
 				

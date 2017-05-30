@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+        <title>Ejercicio 01b</title>
+        <meta name="author" content="Eleonora">
+        <meta name="keywords" content="">
+        <meta name="description" content="">
+        
+        <!-- ********** icona **********  -->
+        <link rel="shortcut icon" href="icona.ico">
+        <!-- ********** CSS ********** -->
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+		
+		<!-- ********** Angular ********** -->
+		<script src="../../node_modules/angular/angular.js"></script>
+		<!-- ********** JavaScript ********** -->
+		<script src="js/index.js"></script>
+
+
+	</head>
+
+	<body ng-app="miApp" ng-controller="MainController as $ctrl">	 
+		
+		<div class="wrap">	
+			<header>
+				<h1>Numeros</h1>
+			</header>
+			<article>
+				<form name="formulario">
+					<label for="nNumero">Incremento</label>
+					<input type="text" id="nNumero" ng-model="$ctrl.nNumero">
+					<button type="button" ng-click="$ctrl.botonAdd()">+</button>
+					<button type="button" ng-click="$ctrl.botonRemove()">-</button>
+				</form>
+
+				<h2>Total:</h2>
+				
+				<p>En el acumulador llevamos: {{$ctrl.nTotal}} </p>
+				
+			</article>
+			<footer>
+				<p>Eleonora Franchini</p>
+			</footer>
+		</div>
+
+	</body>
+</html>
