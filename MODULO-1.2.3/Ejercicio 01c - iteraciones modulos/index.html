@@ -11,19 +11,24 @@
         <link rel="shortcut icon" href="icona.ico">
         <!-- ********** CSS ********** -->
         <link rel="stylesheet" type="text/css" href="css/style.css">
+		
 		<!-- ********** Angular ********** -->
-		<script src="../../node_modules/angular/angular.min.js"></script>
+		<script src="../../node_modules/angular/angular.js"></script>
+		<!-- ********** JavaScript ********** -->
+		<script src="js/index.js"></script>
+		<script src="js/controlers.js"></script>
 
 
 	</head>
 
 	<!-- ng-init es un ANTIPATRON que no se debe utilizar -->
-	<body ng-app ng-init="aIdeas = []; sNombre = 'Pepe' ">	 
+	<body ng-app="miApp" ng-controller="MainController">	 
 		
 		<div class="wrap">	
 			<header>
 				<h1>Pensamientos</h1>
 			</header>
+			<!-- como todos los metodos están en el article lo puedo poner aqui en lugar que body -->
 			<article>
 				<form name="formulario">
 					<label for="sNombre">Indica tu nombre</label>
@@ -31,13 +36,14 @@
 					<input type="text" id="sNombre" ng-model="sNombre">
 					<label for="sIdea">Comparte una idea</label>
 					<input type="text" id="sIdea" ng-model="sIdea">
-					<button type="button" ng-click="aIdeas.push(sIdea); sIdea=''">Añadir</button>
+					<!-- aIdeas.push(sIdea); sIdea='' -->
+					<button type="button" ng-click="botonAdd">Añadir</button>
 				</form>
 
 				<p>Hola <span id class="destacado">{{sNombre}}</span>.</p>
 				
 				<p>Pensamientos que has tenido: </p>
-				<ul ng-repeat="idea in aIdeas"> 
+				<ul ng-repeat="idea in aIdeas track by $index"> 
 					<li> Tu pensiamento numero {{$index + 1}} fue: {{idea}} </li>
 				</ul>
 				
